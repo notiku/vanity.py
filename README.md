@@ -9,11 +9,11 @@ When a member has a set text in their custom status they'll be awarded an option
 ## Features
 
 - Option to run in "whitelist" mode.
-- ⚠️ This will make the bot leave **EVERY** server it is in or is being invited to unless manually whitelisted.
-- Note: The set `guild_id` in config.py will always be whitelisted.
+  - ⚠️ This will make the bot leave **EVERY** server it is in or is being invited to unless manually whitelisted.
+  - Note: The set `guild_id` in config.py will always be whitelisted.
 
 - Option to switch between strict and not strict matching
-- Setting `vanity_strict` to `True` in config.py will make the bot check if the users status is equal to the set one, just checks if it's somewhere in the status otherwise.
+  - Setting `vanity_strict` to `True` in config.py will make the bot check if the users status is equal to the set one, just checks if it's somewhere in the status otherwise.
 
 - Option to automatically leave servers that don't have the vanity feature.
 
