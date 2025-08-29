@@ -52,7 +52,7 @@ To change the bots colors and emojis used accross all embeds edit them in [cogs/
 
 The bot is pretty much done as there isn't really much to it other than adding a role to users that "rep" a server and send a message so don't expect many feature updates.
 
-We're working on a "mini" version that runs with a JSON "database" (or none at all) to make self-hosting for people that only want to use the bot for their personal server only easier.
+We're working on a "mini" version that runs with a JSON "database" (or none at all) to make self-hosting for people that only want to use the bot for their personal server easier.
 
 Maybe add support for other activity types?
 
