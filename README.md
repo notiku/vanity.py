@@ -44,6 +44,10 @@ When a member has a set text in their custom status they'll be awarded an option
 - And finally, start the bot.
   - `python launcher.py`
 
+## How do I change the embeds?
+
+To change the bots colors and emojis used accross all embeds edit them in [cogs/utils/constants.py](/cogs/utils/constants.py).
+
 ## TODO
 
 The bot is pretty much done as there isn't really much to it other than adding a role to users that "rep" a server and send a message so don't expect many feature updates.
