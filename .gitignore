@@ -1,0 +1,14 @@
+node_modules/*
+
+*.json
+migrations/*.json
+
+*.pyc
+*.log
+venv/*
+.venv/*
+*.sublime-*
+config.py
+*__pycache__/*
+
+!cogs/vanity/config.py
