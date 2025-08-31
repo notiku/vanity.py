@@ -282,6 +282,37 @@ def main(ctx):
             asyncio.run(run_bot())
 
 
+async def register_slash_commands():
+    log = logging.getLogger()
+    try:
+        pool = await create_pool()
+    except Exception:
+        click.echo("Could not set up PostgreSQL. Exiting.", file=sys.stderr)
+        log.exception("Could not set up PostgreSQL. Exiting.")
+        return
+
+    try:
+        r = await create_redis_pool()
+    except Exception:
+        click.echo("Could not set up Redis. Exiting.", file=sys.stderr)
+        log.exception("Could not set up Redis. Exiting.")
+        return
+
+    async with Client() as bot:
+        bot.pool = pool
+        bot.redis = r
+        await bot.login(config.token)
+        commands = await bot.tree.sync(guild=None)
+        await bot.close()
+        click.echo(f"Successfully registered {len(commands)} slash commands.")
+
+
+@main.command()
+def slash():
+    """Registers the slash commands"""
+    asyncio.run(register_slash_commands())
+
+
 @main.group(short_help="database stuff", options_metavar="[options]")
 def db():
     pass

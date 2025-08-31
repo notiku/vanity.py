@@ -41,6 +41,9 @@ When a member has a set text in their custom status they'll be awarded an option
   - Note: From now on use `python` on Linux and replace it with `py` on Windows.
   - `python launcher.py db init`
 
+- Register slash commands.
+  - `python launcher.py slash`
+
 - And finally, start the bot.
   - `python launcher.py`
 
