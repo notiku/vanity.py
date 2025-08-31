@@ -178,8 +178,6 @@ class Client(commands.AutoShardedBot):
     async def on_ready(self):
         if not hasattr(self, "uptime"):
             self.uptime = discord.utils.utcnow()
-            await self.tree.sync(guild=None)
-            log.info("Synced application commands.")
 
             if config.only_vanity:
                 for guild in self.guilds:
